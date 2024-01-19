@@ -1,16 +1,25 @@
 .home-button{
     display: flex;
-    width: 99vw;
+    width: 98%;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    padding: 13px;
-    background-color: rgb(0, 125, 160);
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 20px;
+    background-color:#c9a48b;;
     text-decoration: none;
     font-weight: bold;
 }
 .home-button a{
     text-decoration: none;
     padding-right:60px;
-    color: white;
+    color: #211017;
+}
+
+.rbc-calendar .rbc-event,
+.rbc-calendar .rbc-day-slot .rbc-background-event {
+  background-color: #ffffff !important;
+  color: #fff !important;
+
 }

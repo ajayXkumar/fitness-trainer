@@ -36,7 +36,7 @@ const Dashboard = () => {
       ],
     },
   ];
-
+  
   const [clients, setClients] = useState(() => {
     const clientsData = JSON.parse(localStorage.getItem("clientsData"), (key, value) => {
       if (key === "appointments" && Array.isArray(value)) {
@@ -47,7 +47,7 @@ const Dashboard = () => {
 
     return clientsData || initialClients;
   });
-
+  
   const [clientForms, setClientForms] = useState({});
   const [editInfoClientId, setEditInfoClientId] = useState(null);
   const [editedFirstName, setEditedFirstName] = useState('');

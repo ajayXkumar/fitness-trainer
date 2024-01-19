@@ -9,10 +9,15 @@ import '../styles/Mycalendar.css'
 const MyCalender = () => {
   const [Clients, setClients] = useState([]);
 
-  useEffect(() => {
-    const clientsData = JSON.parse(localStorage.getItem("clientsData"));
-    setClients(clientsData);
-  }, [Clients]);
+    useEffect(() => {
+      const clientsData = JSON.parse(localStorage.getItem("clientsData"));
+  
+      // Check if clientsData is different from the current state before updating
+      if (JSON.stringify(clientsData) !== JSON.stringify(Clients)) {
+        setClients(clientsData);
+      }
+    }, [Clients]);
+
   const localizer = momentLocalizer(moment);
 
   const generateEvents = () => {
@@ -31,19 +36,15 @@ const MyCalender = () => {
 
     return events;
   };
-
+  console.log("hello")
   return (
     <div className="dashboard-container">
       <div className="home-button">
-      <Link to={"/"} className="brand">
+        <Link to={"/"} className="brand">
           Fitness Trainer
         </Link>
-        
-      <Link to={"/"}>
-          Home
-      </Link>
+        <Link to={"/"}>Home</Link>
       </div>
-      
 
       <Calendar
         localizer={localizer}
@@ -51,6 +52,24 @@ const MyCalender = () => {
         startAccessor="start"
         endAccessor="end"
         style={{ height: 500 }}
+        components={{
+          event: (props) => {
+            return (
+              <div
+                style={{
+                  backgroundColor:'#472734',
+                  background:"#472734",
+                  border:"none",
+                  color: 'white', 
+                  padding: '5px',
+                  borderRadius: '5px',
+                }}
+              >
+                {props.title}
+              </div>
+            );
+          },
+        }}
       />
     </div>
   );

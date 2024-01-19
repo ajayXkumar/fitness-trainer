@@ -28,8 +28,7 @@
     top:90%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(0, 125, 160);
-
+    background-color: #492735;
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -38,6 +37,8 @@
   }
   
   .save-button:hover {
-    background-color: #0056b3;
+    background-color: #381e28;
+    color: white;
+    padding: 7px 13px;
   }
   
