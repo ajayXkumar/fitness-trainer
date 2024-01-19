@@ -80,6 +80,6 @@ button:active {
 
 @media screen and (max-width:450px) {
   .dashboard-container {
-    margin-left: 10px;
+    margin: 10px;
   }
 }

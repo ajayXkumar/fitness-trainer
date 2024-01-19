@@ -33,13 +33,7 @@
     color: white;
   }
 
-  @media screen and (max-width:450px) {
-    
-    .single-card{
-
-    }
-
-  }
+  
   .add-client-form {
     position: absolute;
     background-color: #fff;
