@@ -77,3 +77,9 @@ button:active {
   padding: 5px;
 }
 
+
+@media screen and (max-width:450px) {
+  .dashboard-container {
+    margin-left: 10px;
+  }
+}
