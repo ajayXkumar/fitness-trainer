@@ -1,5 +1,5 @@
 .dashboard-container {
-  margin: 50px;
+  margin: 10px;
 }
 
 th:first-child,
@@ -28,7 +28,7 @@ td:nth-child(5) {
 }
 
 .user-table {
-  width: 95%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   border-collapse: collapse;
@@ -69,7 +69,7 @@ button {
   background-color: rgb(224, 224, 224);
 }
 
-button:active {
+button:hover {
   color: rgb(0, 75, 95);
   border: none;
   margin: 1px;

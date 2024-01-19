@@ -11,7 +11,6 @@ import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
-
 const Dashboard = () => {
   const initialClients = [
     {
@@ -206,7 +205,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard-container">
       <InfoCards Clients={clients} onAddClient={addClient} />
-
+      
       <Dialog open={isSlotBookedDialogOpen} onClose={closeSlotBookedDialog}>
         <DialogTitle>This Slot is already Booked</DialogTitle>
         <DialogContent>

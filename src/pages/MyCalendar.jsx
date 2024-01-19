@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import InfoCards from '../Componant/NavigationButton'
 import { Link } from "react-router-dom";
 import moment from "moment";
-import "../styles/Dashboard.css";
+import '../styles/Mycalendar.css'
 
 const MyCalender = () => {
   const [Clients, setClients] = useState([]);
@@ -33,12 +34,12 @@ const MyCalender = () => {
 
   return (
     <div className="dashboard-container">
-
-    <div className="all-cards">
-      <div className="single-card">
-        <Link to={"/"}>Home</Link>
+      <div className="home-button">
+      <Link to={"/"}>
+          Home
+      </Link>
       </div>
-      </div>
+      
 
       <Calendar
         localizer={localizer}
