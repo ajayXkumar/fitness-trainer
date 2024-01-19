@@ -35,6 +35,10 @@ const MyCalender = () => {
   return (
     <div className="dashboard-container">
       <div className="home-button">
+      <Link to={"/"} className="brand">
+          Fitness Trainer
+        </Link>
+        
       <Link to={"/"}>
           Home
       </Link>
