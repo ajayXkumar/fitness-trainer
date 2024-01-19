@@ -1,0 +1,79 @@
+.dashboard-container {
+  margin: 50px;
+}
+
+th:first-child,
+td:first-child {
+  width: 20%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 20%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  width: 20%;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+  width: 30%;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+  width: 10%;
+}
+
+.user-table {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.user-table th {
+  margin-top: 10px;
+  padding: 8px;
+  padding-left: 15px;
+  text-align: left;
+  background: black;
+  color: white;
+}
+.user-table td {
+  border-bottom: 3px solid #d0d0d0;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: left;
+  background-color: rgb(255, 255, 255);
+}
+
+.appointment-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.appointment-buttons button {
+  margin-left: 5px;
+}
+button {
+  color: rgb(0, 125, 160);
+  border: none;
+  margin: 1px;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: rgb(224, 224, 224);
+}
+
+button:active {
+  color: rgb(0, 75, 95);
+  border: none;
+  margin: 1px;
+  border-radius: 4px;
+  padding: 5px;
+}
+
