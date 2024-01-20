@@ -71,3 +71,8 @@ The main dashboard displays a grid of clients with their first name, last name, 
  - Delete client
  - Delete Appointment
  - Calendar
+
+## Contact and Support
+For further assistance or inquiries, please contact me:
+
+Email: [ajayk.cs.20@nitj.ac.in](ajayk.cs.20@nitj.ac.in)
