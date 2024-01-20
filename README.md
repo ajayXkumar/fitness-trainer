@@ -49,17 +49,17 @@ The main dashboard displays a grid of clients with their first name, last name, 
 
 - **Edit Client**: Click the "Edit" button next to a client to update their first name, last name, and location. Confirm changes by clicking the "Save" button.
 
--**Delete Client**: Click the "Delete" button next to a client to remove them from the dashboard. A confirmation dialog will appear.
+- **Delete Client**: Click the "Delete" button next to a client to remove them from the dashboard. A confirmation dialog will appear.
 
--**Add Appointment**: Click the "Add Appointment" button on a client's row to add a new appointment. Fill in the details and click "Save."
+- **Add Appointment**: Click the "Add Appointment" button on a client's row to add a new appointment. Fill in the details and click "Save."
 
--**Edit Appointment**: Click the "Edit" button next to an appointment to modify its details. Confirm changes by clicking the "Save" button.
+- **Edit Appointment**: Click the "Edit" button next to an appointment to modify its details. Confirm changes by clicking the "Save" button.
 
--**Delete Appointment**: Click the "Delete" button next to an appointment to remove it. A confirmation dialog will appear.
+- **Delete Appointment**: Click the "Delete" button next to an appointment to remove it. A confirmation dialog will appear.
 
--**Add New Client**: Use the "Add New Client" button to add a new client. Provide the required information and click "Save."
+- **Add New Client**: Use the "Add New Client" button to add a new client. Provide the required information and click "Save."
 
--**Calendar View**: Navigate to the "Calendar" section to view appointments in a monthly, weekly, or daily format. The calendar provides a visual representation of scheduled appointments.
+- **Calendar View**: Navigate to the "Calendar" section to view appointments in a monthly, weekly, or daily format. The calendar provides a visual representation of scheduled appointments.
 
 ## Functionality
 
