@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AppointmentForm from "../Componant/DateAndTimeSelector";
+import DateAndTimeSelector from "../Componant/DateAndTimeSelector";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import EditCalendarIcon from "@mui/icons-material/EditCalendar";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
@@ -77,7 +77,7 @@ const Dashboard = () => {
     const client = clients.find((c) => c.id === clientId);
     const overlappingAppointment = client.appointments.find((appointment) => {
       const diffInMinutes = Math.abs(newAppointment - appointment) / 60000;
-      return diffInMinutes < 60; // Check if the new appointment overlaps with any existing appointment within the next hour
+      return diffInMinutes < 60; 
     });
 
     if (overlappingAppointment) {
@@ -286,7 +286,7 @@ const Dashboard = () => {
                         <EditCalendarIcon />
                       </button>
                       {clientForms[`${client.id}-${appointment}`] && (
-                        <AppointmentForm
+                        <DateAndTimeSelector
                           msg={`Reschedule the appointment of ${client.firstName} ${client.lastName}`}
                           onSave={(dateTime) =>
                             editedSaveAppointment(
@@ -327,7 +327,7 @@ const Dashboard = () => {
                   <AddCircleIcon />
                 </button>
                 {clientForms[client.id] && (
-                  <AppointmentForm
+                  <DateAndTimeSelector
                     msg={`Add new appointment to ${client.firstName} ${client.lastName}`}
                     onSave={(dateTime) => saveAppointment(client.id, dateTime)}
                     onClose={() =>

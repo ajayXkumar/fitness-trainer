@@ -1,75 +1,72 @@
-<<<<<<< HEAD
-# fitness-trainer
-assignment
-=======
-# Getting Started with Create React App
+# Client Management Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Fitness Trainer Dashboard! This application allows fitness trainers to manage clients, appointments, and workout plans efficiently.
+ [https://fitness-trainer-virid.vercel.app/](https://fitness-trainer-virid.vercel.app/)
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+### Installation
 
-### `npm start`
+1. Clone the repository:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   ```bash
+   git clone https://github.com/ajayXkumar/fitness-trainer
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Navigate to the project directory:
 
-### `npm test`
+   ```bash
+   cd Fitness-trainer
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Install the project dependencies:
 
-### `npm run build`
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Running the Application
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm run dev
+   ```
 
-### `npm run eject`
+5. Open your web browser and visit `http://localhost:3000` to access the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Images
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Home Page](public/image-2.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Calendar Page](public/image-4.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Client Grid**: 
+The main dashboard displays a grid of clients with their first name, last name, location, and appointments. Each row in the grid has buttons to edit, delete, and add appointments
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Edit Client**: Click the "Edit" button next to a client to update their first name, last name, and location. Confirm changes by clicking the "Save" button.
 
-### Code Splitting
+-**Delete Client**:Click the "Delete" button next to a client to remove them from the dashboard. A confirmation dialog will appear.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+-**Add Appointment**:Click the "Add Appointment" button on a client's row to add a new appointment. Fill in the details and click "Save."
 
-### Analyzing the Bundle Size
+-**Edit Appointment**:Click the "Edit" button next to an appointment to modify its details. Confirm changes by clicking the "Save" button.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+-**Delete Appointment**:Click the "Delete" button next to an appointment to remove it. A confirmation dialog will appear.
 
-### Making a Progressive Web App
+-**Add New Client**:Use the "Add New Client" button to add a new client. Provide the required information and click "Save."
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+-**Calendar View**:Navigate to the "Calendar" section to view appointments in a monthly, weekly, or daily format. The calendar provides a visual representation of scheduled appointments.
 
-### Advanced Configuration
+## Functionality
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 6c17195 (Initialize project using Create React App)
+-All clients info displayed in grid
+-Add new client
+-Add new appointment
+-Edit First name , last name and location 
+-Edit appointment 
+-Delete client
+-Delete Appointment
