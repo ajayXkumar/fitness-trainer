@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 const AddClient = ({ onAddClient }) => {
   const [showForm, setShowForm] = useState(false);

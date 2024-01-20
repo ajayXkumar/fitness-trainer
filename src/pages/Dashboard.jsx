@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import AppointmentForm from "../Componant/DateAndTimeSelector";
-import AddCircleIcon from '@mui/icons-material/AddCircle';
-import EditCalendarIcon from '@mui/icons-material/EditCalendar';
-import BorderColorIcon from '@mui/icons-material/BorderColor';
-import SaveAsIcon from '@mui/icons-material/SaveAs';
-import DeleteIcon from '@mui/icons-material/Delete';
+import AddCircleIcon from "@mui/icons-material/AddCircle";
+import EditCalendarIcon from "@mui/icons-material/EditCalendar";
+import BorderColorIcon from "@mui/icons-material/BorderColor";
+import SaveAsIcon from "@mui/icons-material/SaveAs";
+import DeleteIcon from "@mui/icons-material/Delete";
 import "../styles/Dashboard.css";
-import InfoCards from '../Componant/NavigationButton'
-import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
+import InfoCards from "../Componant/NavigationButton";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
 const Dashboard = () => {
   const initialClients = [
     {
@@ -19,9 +19,9 @@ const Dashboard = () => {
       lastName: "Doe",
       location: "New York",
       appointments: [
-        new Date("2024-01-17T10:00:00"),
-        new Date("2024-01-18T14:30:00"),
-        new Date("2024-01-20T11:45:00"),
+        new Date("2024-01-25T10:00:00"),
+        new Date("2024-01-26T14:30:00"),
+        new Date("2024-01-27T11:45:00"),
       ],
     },
     {
@@ -30,33 +30,36 @@ const Dashboard = () => {
       lastName: "Smith",
       location: "New York",
       appointments: [
-        new Date("2024-01-17T15:15:00"),
-        new Date("2024-01-19T09:00:00"),
-        new Date("2024-01-21T13:30:00"),
+        new Date("2024-02-17T15:15:00"),
+        new Date("2024-02-19T09:00:00"),
+        new Date("2024-02-21T13:30:00"),
       ],
     },
   ];
-  
+
   const [clients, setClients] = useState(() => {
-    const clientsData = JSON.parse(localStorage.getItem("clientsData"), (key, value) => {
-      if (key === "appointments" && Array.isArray(value)) {
-        return value.map((dateString) => new Date(dateString));
+    const clientsData = JSON.parse(
+      localStorage.getItem("clientsData"),
+      (key, value) => {
+        if (key === "appointments" && Array.isArray(value)) {
+          return value.map((dateString) => new Date(dateString));
+        }
+        return value;
       }
-      return value;
-    });
+    );
 
     return clientsData || initialClients;
   });
-  
+
   const [clientForms, setClientForms] = useState({});
   const [editInfoClientId, setEditInfoClientId] = useState(null);
-  const [editedFirstName, setEditedFirstName] = useState('');
-  const [editedLastName, setEditedLastName] = useState('');
-  const [editedLocation, setEditedLocation] = useState('');
+  const [editedFirstName, setEditedFirstName] = useState("");
+  const [editedLastName, setEditedLastName] = useState("");
+  const [editedLocation, setEditedLocation] = useState("");
   const [isSlotBookedDialogOpen, setIsSlotBookedDialogOpen] = useState(false);
-  const [slotBookedMessage, setSlotBookedMessage] = useState('');
+  const [slotBookedMessage, setSlotBookedMessage] = useState("");
 
- useEffect(() => {
+  useEffect(() => {
     if (clients) {
       localStorage.setItem(
         "clientsData",
@@ -73,7 +76,7 @@ const Dashboard = () => {
   const checkSlotAvailability = (clientId, newAppointment) => {
     const client = clients.find((c) => c.id === clientId);
     const overlappingAppointment = client.appointments.find((appointment) => {
-      const diffInMinutes = Math.abs(newAppointment - appointment) / 60000; // Convert milliseconds to minutes
+      const diffInMinutes = Math.abs(newAppointment - appointment) / 60000;
       return diffInMinutes < 60; // Check if the new appointment overlaps with any existing appointment within the next hour
     });
 
@@ -119,11 +122,7 @@ const Dashboard = () => {
     }));
   };
 
-  const editedSaveAppointment = (
-    clientId,
-    oldAppointment,
-    newDateTime
-  ) => {
+  const editedSaveAppointment = (clientId, oldAppointment, newDateTime) => {
     const updatedClients = clients.map((client) =>
       client.id === clientId
         ? {
@@ -170,10 +169,8 @@ const Dashboard = () => {
 
   const toggleSaveEdit = (clientId, client) => {
     if (editInfoClientId === client.id) {
-      // Save the info
       saveInfo(clientId);
     } else {
-      // Toggle edit mode
       editInfo(clientId, client);
     }
   };
@@ -190,7 +187,12 @@ const Dashboard = () => {
       setClients((prevClients) =>
         prevClients.map((client) =>
           client.id === clientId
-            ? { ...client, firstName: editedFirstName, lastName: editedLastName, location: editedLocation }
+            ? {
+                ...client,
+                firstName: editedFirstName,
+                lastName: editedLastName,
+                location: editedLocation,
+              }
             : client
         )
       );
@@ -199,13 +201,16 @@ const Dashboard = () => {
   };
 
   const addClient = (newClient) => {
-    setClients([...clients, { id: clients.length + 1, ...newClient, appointments: [] }]);
+    setClients([
+      ...clients,
+      { id: clients.length + 1, ...newClient, appointments: [] },
+    ]);
   };
 
   return (
     <div className="dashboard-container">
       <InfoCards Clients={clients} onAddClient={addClient} />
-      
+
       <Dialog open={isSlotBookedDialogOpen} onClose={closeSlotBookedDialog}>
         <DialogTitle>This Slot is already Booked</DialogTitle>
         <DialogContent>
@@ -276,9 +281,7 @@ const Dashboard = () => {
                     </span>
                     <div>
                       <button
-                        onClick={() =>
-                          editAppointment(client.id, appointment)
-                        }
+                        onClick={() => editAppointment(client.id, appointment)}
                       >
                         <EditCalendarIcon />
                       </button>
@@ -312,10 +315,12 @@ const Dashboard = () => {
                 ))}
               </td>
               <td>
-                <button
-                  onClick={() => toggleSaveEdit(client.id, client)}
-                >
-                  {editInfoClientId === client.id ? <SaveAsIcon /> : <BorderColorIcon />}
+                <button onClick={() => toggleSaveEdit(client.id, client)}>
+                  {editInfoClientId === client.id ? (
+                    <SaveAsIcon />
+                  ) : (
+                    <BorderColorIcon />
+                  )}
                 </button>
 
                 <button onClick={() => addAppointment(client.id)}>
@@ -324,9 +329,7 @@ const Dashboard = () => {
                 {clientForms[client.id] && (
                   <AppointmentForm
                     msg={`Add new appointment to ${client.firstName} ${client.lastName}`}
-                    onSave={(dateTime) =>
-                      saveAppointment(client.id, dateTime)
-                    }
+                    onSave={(dateTime) => saveAppointment(client.id, dateTime)}
                     onClose={() =>
                       setClientForms((prevForms) => ({
                         ...prevForms,

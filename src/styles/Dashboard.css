@@ -33,6 +33,7 @@ td:nth-child(5) {
   margin-right: auto;
   margin-top: 10px;
   border-collapse: collapse;
+  
 }
 
 .user-table th {
@@ -42,10 +43,13 @@ td:nth-child(5) {
   text-align: left;
   color: rgb(1, 1, 1);
   background-color:#f0d9c7;
+
+  
 }
 .user-table td {
   color: #2b131d;
   background-color: rgb(255, 255, 255);
+  border: 1px solid #f0d9c7;
   border-radius: 3px;
   padding: 8px;
   padding-left: 15px;
@@ -72,7 +76,7 @@ button {
 }
 
 button:hover {
-  color:#331b25;
+  color:#831241;
   border: none;
   margin: 1px;
   border-radius: 4px;
