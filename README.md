@@ -37,9 +37,9 @@ Welcome to the Fitness Trainer Dashboard! This application allows fitness traine
 
 ## Images
 
-![Home Page](public/image-2.png)
+![Home Page](public/home.png)
 
-![Calendar Page](public/image-4.png)
+![Calendar Page](public/calendar.png)
 
 
 ## Usage
@@ -63,10 +63,11 @@ The main dashboard displays a grid of clients with their first name, last name, 
 
 ## Functionality
 
--All clients info displayed in grid
--Add new client
--Add new appointment
--Edit First name , last name and location 
--Edit appointment 
--Delete client
--Delete Appointment
+ - All clients info displayed in grid
+ - Add new client
+ - Add new appointment
+ - Edit First name , last name and location 
+ - Edit appointment 
+ - Delete client
+ - Delete Appointment
+ - Calendar
