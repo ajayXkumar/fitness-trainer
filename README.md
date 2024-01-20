@@ -1,4 +1,4 @@
-# Client Management Application
+# Fitness Trainer Dashboard
 
 Welcome to the Fitness Trainer Dashboard! This application allows fitness trainers to manage clients, appointments, and workout plans efficiently.
  [https://fitness-trainer-virid.vercel.app/](https://fitness-trainer-virid.vercel.app/)
